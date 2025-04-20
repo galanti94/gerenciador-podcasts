@@ -1,4 +1,4 @@
-# Podcast Menager
+# PodcastModel Menager
 
 ### Descrição
 Um app estilo Netflix para centralizar episódios de podcastas com filtro de categoria
