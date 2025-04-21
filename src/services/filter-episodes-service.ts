@@ -1,11 +1,11 @@
 import { IncomingMessage } from "http";
 
-import { FilterPodcastModel } from "../models/filter-podcast-model";
+import { PodcastTransferModel } from "../models/podcast-transfer-model";
 import { repositoryPodcast } from "../repositories/podcasts-repository";
 import { StatusCode } from "../utils/http-status-code";
 
-export const serviceFilterEpisodes = async (request: IncomingMessage): Promise<FilterPodcastModel> => {
-    let responseFormat: FilterPodcastModel = {
+export const serviceFilterEpisodes = async (request: IncomingMessage): Promise<PodcastTransferModel> => {
+    let responseFormat: PodcastTransferModel = {
         statusCode: StatusCode.NO_CONTENT,
         body: []
     };
