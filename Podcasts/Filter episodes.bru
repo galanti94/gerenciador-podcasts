@@ -1,0 +1,15 @@
+meta {
+  name: Filter episodes
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost}}/api/episodes?p=flow
+  body: none
+  auth: inherit
+}
+
+params:query {
+  p: flow
+}
