@@ -8,8 +8,8 @@ import { PodcastTransferModel } from '../models/podcast-transfer-model';
 
 export const getListEpisodes = async (request: IncomingMessage, response: ServerResponse) => {
     const content = await serviceListEpisodes();
-    response.writeHead(StatusCode.OK, {'Content-Type': ContentType.JSON});
-    response.end(JSON.stringify(content));
+    response.writeHead(content.statusCode, {'Content-Type': ContentType.JSON});
+    response.end(JSON.stringify(content.body));
 };
 
 export const getFilterEpisodes = async (request: IncomingMessage, response: ServerResponse) => {
