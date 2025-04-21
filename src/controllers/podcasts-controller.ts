@@ -2,7 +2,6 @@ import { IncomingMessage, ServerResponse } from 'http'
 
 import { serviceListEpisodes } from '../services/list-episodes-service';
 import { serviceFilterEpisodes } from '../services/filter-episodes-service';
-import { StatusCode } from '../utils/http-status-code';
 import { ContentType } from '../utils/content-type';
 import { PodcastTransferModel } from '../models/podcast-transfer-model';
 
@@ -20,6 +19,6 @@ export const getFilterEpisodes = async (request: IncomingMessage, response: Serv
 
     response.writeHead(content.statusCode, {'Content-Type': ContentType.JSON});
     response.write(JSON.stringify(content.body));
-    
+
     response.end();
 }
