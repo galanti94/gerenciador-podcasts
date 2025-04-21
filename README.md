@@ -1,29 +1,29 @@
 # 🎧 PodcastModel Menager
 
-## Descrição
+## Description
 
-Um app no estilo Netflix para centralizar episódios de podcasts em vídeo, organizando-os por categorias como saúde, fitness, mentalidade e humor. A proposta é oferecer uma experiência rápida e intuitiva para encontrar o podcast ideal conforme o interesse do usuário.
+A Netflix-style app to centralize video podcast episodes, organizing them by categories such as health, fitness, mindset, and humor. The goal is to offer a fast and intuitive experience to help users find the perfect podcast based on their interests.
 
-## Domínio
+## Domain
 
-🎙️ **Podcasts em vídeo**  
-📺 Centralização e categorização de episódios
+🎙️ **Video Podcasts**  
+📺 Centralization and categorization of episodes
 
-## Funcionalidades
+## Features
 
-- 🔍 Listagem de episódios de podcasts por categoria
-- 🗂️ Filtro por nome de podcast
-- 🎯 Categorias disponíveis: `saúde`, `fitness`, `mentalidade`, `humor`
+- 🔍 List podcast episodes by category
+- 🗂️ Filter by podcast name
+- 🎯 Available categories: `health`, `fitness`, `mindset`, `humor`
 
 ## Endpoints
 
 ### `GET /episodes`
-Retorna a lista de episódios disponíveis.
+Returns the list of available episodes.
 
-### `GET /episodes/filter?name=<nome>`
-Retorna episódios filtrados pelo nome do podcast.
+### `GET /episodes/filter?name=<name>`
+Returns episodes filtered by podcast name.
 
-#### Exemplo de resposta:
+#### Sample Response:
 ```json
 [
     {
@@ -31,48 +31,52 @@ Retorna episódios filtrados pelo nome do podcast.
         "episode": "CBUM - Flow #319",
         "cover": "https://i.ytimg.com/vi/pQSuQmUfS30/hq720.jpg",
         "url": "https://www.youtube.com/watch?v=pQSuQmUfS30",
-        "categories": ["saúde", "bodybuilder"]
+        "categories": ["health", "bodybuilder"]
     }
 ]
 ```
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 .
 ├── src
-│   ├── app.ts                  # Entrada principal do servidor
+│   ├── app.ts                      # Main server entry point
 │   ├── controllers
-│   │   └── podcasts-controller.ts # Lógica de listagem e filtragem
+│   │   └── podcasts-controller.ts  # Listing and filtering logic
 │   ├── routes
-│   │   └── routes.ts           # Definição das rotas da API
+│   │   └── routes.ts               # API route definitions
 │   └── utils
-│       └── http-methods.ts     # Enum de métodos HTTP
+│       └── http-methods.ts         # HTTP method enum
 ```
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - TypeScript
-- Node.js (sem frameworks externos)
-- HTTP nativo
+- Node.js (no external frameworks)
+- Native HTTP module
 
-## Como Rodar o Projeto
+## How to Run the Project
 
 ```bash
-# Clone o repositório
-git clone https://github.com/galanti94/gerenciador-podcasts.git
+# Clone the repository
+git clone https://github.com/galanti94/podcast-manager-node-ts-no-frameworks.git
 
-# Entre na pasta
-cd gerenciador-podcasts
+# Navigate to the project folder
+cd podcast-manager-node-ts-no-frameworks
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Inicie o servidor
+# Start the server
 npm run start:dev
 ```
 
-## Autor
+## Next steps
+- Add docker container
+- Add PostgreSQL database
+
+## Author
 
 Guilherme Roncaratti Galanti  
 [LinkedIn](https://www.linkedin.com/in/guilherme-galanti/) • [GitHub](https://github.com/galanti94)
